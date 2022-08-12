@@ -64,6 +64,9 @@ public class AdminServerWebConfiguration {
 	@ConditionalOnWebApplication(type = ConditionalOnWebApplication.Type.REACTIVE)
 	public static class ReactiveRestApiConfiguration {
 
+		// TODO: #2011 - we might need an own Implementation of DefaultErrorWebExceptionHandler for hanndling specific root causes
+		//    i.e. 'java.lang.IllegalArgumentException: 'position' exceeds the resource length 115' sends a status code 416 in a servlet application
+
 		private final AdminServerProperties adminServerProperties;
 
 		public ReactiveRestApiConfiguration(AdminServerProperties adminServerProperties) {
