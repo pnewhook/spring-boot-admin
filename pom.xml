@@ -89,6 +89,7 @@
         <module>spring-boot-admin-starter-server</module>
         <module>spring-boot-admin-starter-client</module>
         <module>spring-boot-admin-samples</module>
+        <module>spring-boot-admin-server-cloud</module>
     </modules>
     <organization>
         <name>codecentric AG</name>
@@ -395,17 +396,6 @@
         </pluginManagement>
     </build>
     <profiles>
-        <profile>
-            <id>include-cloud</id>
-            <activation>
-                <property>
-                    <name>!excludeSpringCloud</name>
-                </property>
-            </activation>
-            <modules>
-                <module>spring-boot-admin-server-cloud</module>
-            </modules>
-        </profile>
         <profile>
             <id>coverage</id>
             <build>
